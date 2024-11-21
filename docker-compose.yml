@@ -1,6 +1,8 @@
 services:
   mysql:
-    image: mysql:8.0
+    build:
+      context: .
+      dockerfile: Dockerfile
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: blume
@@ -9,3 +11,4 @@ services:
       - ./data/scripts/mock.sql:/docker-entrypoint-initdb.d/mock.sql # inserts aqui
     ports:
       - "3307:3306"
+    image: victorlcdpaula/banco-neos
