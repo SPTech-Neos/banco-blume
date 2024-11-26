@@ -1,0 +1,41 @@
+name: CD BACKEND NEOS
+
+on:
+  workflow_run:
+    workflows: ["Terraform Configs"]
+    types:
+      - completed  # Executa o CD somente após a conclusão do CI
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup SSH for frontend and backend
+        run: |
+          # Salvar a chave privada em um arquivo temporário
+          echo "$SSH_PRIVATE_KEY" > blume_key.pem
+          
+          # Definir permissões de acesso corretas para a chave privada
+          chmod 600 blume_key.pem
+
+      - name: Deploy Docker image to both backends via jump server
+        env:
+          PUBLIC_IP: ${{ secrets.PUBLIC_IP }}
+          DB_IP: ${{ secrets.PRIVATE_IP }}
+        run: |
+          # Conectar ao primeiro backend via jump server (frontend) usando ProxyJump
+          ssh -o StrictHostKeyChecking=no -i blume_key.pem \
+            -o ProxyJump=ubuntu@$PUBLIC_IP \
+            ubuntu@$DB_IP << 'EOF'
+              # Comandos SSH para atualizar a imagem Docker na primeira VM do backend
+              sudo docker pull victorlcdpaula/banco-neos:latest
+              sudo docker run -d -p 3307:3306 victorlcdpaula/banco-neos:latest
+            EOF
+
+      - name: Clean up private key
+        run: |
+          rm -f blume_key.pem
