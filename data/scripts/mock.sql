@@ -1,3 +1,5 @@
+USE blume;
+
 -- crie uma massa de dados com 20 addresses
 INSERT INTO address (public_place, city, zip_code, uf) VALUES
 ('Rua 1', 'São Paulo', '01010101', 'SP'),
