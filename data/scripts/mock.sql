@@ -218,16 +218,16 @@ INSERT INTO employee_type (name) VALUES
 
 
 INSERT INTO employee (name, email, password, img_url, fk_establishment, fk_employee_type, fk_phone, fk_local, fk_status) VALUES
-('João da Silva', 'joao.silva@salao1.com', '$2a$10$5ecretp4ssw0rd', 'https://example.com/joao.jpg', 1, 1, 1, 1, 1),
-('Maria Oliveira', 'maria.oliveira@salao2.com', '$2a$10$5ecretp4ssw0rd', 'https://example.com/maria.jpg', 2, 2, 2, 2, 1),
-('Carlos Pereira', 'carlos.pereira@salao3.com', '$2a$10$5ecretp4ssw0rd', 'https://example.com/carlos.jpg', 3, 3, 3, 3, 1),
-('Ana Costa', 'ana.costa@salao4.com', '$2a$10$5ecretp4ssw0rd', 'https://example.com/ana.jpg', 4, 4, 4, 4, 1),
-('Luiz Santos', 'luiz.santos@salao5.com', '$2a$10$5ecretp4ssw0rd', 'https://example.com/luiz.jpg', 5, 5, 5, 5, 1),
-('Paula Almeida', 'paula.almeida@salao6.com', '$2a$10$5ecretp4ssw0rd', 'https://example.com/paula.jpg', 6, 6, 6, 6, 1),
-('Ricardo Lima', 'ricardo.lima@salao7.com', '$2a$10$5ecretp4ssw0rd', 'https://example.com/ricardo.jpg', 7, 7, 7, 7, 1),
-('Fernanda Rocha', 'fernanda.rocha@salao8.com', '$2a$10$5ecretp4ssw0rd', 'https://example.com/fernanda.jpg', 8, 8, 8, 8, 1),
-('Bruna Mendes', 'bruna.mendes@salao9.com', '$2a$10$5ecretp4ssw0rd', 'https://example.com/bruna.jpg', 9, 9, 9, 9, 1),
-('Pedro Araujo', 'pedro.araujo@salao10.com', '$2a$10$5ecretp4ssw0rd', 'https://example.com/pedro.jpg', 10, 10, 10, 10, 1);
+('João da Silva', 'joao.silva@salao1.com', '$2a$10$hleet8CAQHml3gRwovtmIeA52jxwrpLZ/MsOQyO0dAOIoBTTdd/W6', 'https://example.com/joao.jpg', 1, 1, 1, 1, 1),
+('Maria Oliveira', 'maria.oliveira@salao2.com', '$2a$10$hleet8CAQHml3gRwovtmIeA52jxwrpLZ/MsOQyO0dAOIoBTTdd/W6', 'https://example.com/maria.jpg', 2, 2, 2, 2, 1),
+('Carlos Pereira', 'carlos.pereira@salao3.com', '$2a$10$hleet8CAQHml3gRwovtmIeA52jxwrpLZ/MsOQyO0dAOIoBTTdd/W6', 'https://example.com/carlos.jpg', 3, 3, 3, 3, 1),
+('Ana Costa', 'ana.costa@salao4.com', '$2a$10$hleet8CAQHml3gRwovtmIeA52jxwrpLZ/MsOQyO0dAOIoBTTdd/W6', 'https://example.com/ana.jpg', 4, 4, 4, 4, 1),
+('Luiz Santos', 'luiz.santos@salao5.com', '$2a$10$hleet8CAQHml3gRwovtmIeA52jxwrpLZ/MsOQyO0dAOIoBTTdd/W6', 'https://example.com/luiz.jpg', 5, 5, 5, 5, 1),
+('Paula Almeida', 'paula.almeida@salao6.com', '$2a$10$hleet8CAQHml3gRwovtmIeA52jxwrpLZ/MsOQyO0dAOIoBTTdd/W6', 'https://example.com/paula.jpg', 6, 6, 6, 6, 1),
+('Ricardo Lima', 'ricardo.lima@salao7.com', '$2a$10$hleet8CAQHml3gRwovtmIeA52jxwrpLZ/MsOQyO0dAOIoBTTdd/W6', 'https://example.com/ricardo.jpg', 7, 7, 7, 7, 1),
+('Fernanda Rocha', 'fernanda.rocha@salao8.com', '$2a$10$hleet8CAQHml3gRwovtmIeA52jxwrpLZ/MsOQyO0dAOIoBTTdd/W6', 'https://example.com/fernanda.jpg', 8, 8, 8, 8, 1),
+('Bruna Mendes', 'bruna.mendes@salao9.com', '$2a$10$hleet8CAQHml3gRwovtmIeA52jxwrpLZ/MsOQyO0dAOIoBTTdd/W6', 'https://example.com/bruna.jpg', 9, 9, 9, 9, 1),
+('Pedro Araujo', 'pedro.araujo@salao10.com', '$2a$10$hleet8CAQHml3gRwovtmIeA52jxwrpLZ/MsOQyO0dAOIoBTTdd/W6', 'https://example.com/pedro.jpg', 10, 10, 10, 10, 1);
 
 
 INSERT INTO employee_services (hours_spent, expertise, fk_employee, fk_service, fk_status) VALUES
